@@ -1,4 +1,4 @@
-function calculateNetSalary(basicSalary, benefits) {
+//function calculateNetSalary(basicSalary, benefits) {
     
 //         const PAYE_RATE = 0.1; 
 //         const NSSF_RATE = 0.06; 
@@ -38,7 +38,7 @@ function calculateNetSalary(basicSalary, benefits) {
 // }
 // calculateNetSalary(50000, 10000);
 
-function paye(income) {
+/*function paye(income) {
     if (income <= 24000) {
         return 10;
     } else if (income <= 32333) {
@@ -91,10 +91,25 @@ function NHIF (grossPay) {
 function nssf(salary){
     return 0.06*salary
 }
-}
+}*/
 const readline = require('readline');
 
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
-});
+})
+
+function getpaye(){
+    rl.question(`Input gross salary:`, (Salary)=>{
+        //let paye = percentage * salary;
+        //let percentage = 0;
+        if (Salary <= 24000){
+            console.log(`Your paye is ` + ` `  + (0.1 * Salary));
+        } else {
+            percentage = 0.35;
+            console.log(`Your paye is ` + ` `  +(0.1 * Salary) );
+        }
+    });
+}
+   
+getpaye();

@@ -13,4 +13,4 @@ function speedDetector(speed) {
         }
     }
 }
-speedDetector(84)
+speedDetector('kuku')

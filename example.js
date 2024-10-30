@@ -1,3 +1,4 @@
+const { log } = require('console');
 const readline = require('readline');
 
 // Create an interface for input and output
@@ -8,27 +9,28 @@ const rl = readline.createInterface({
 
 // Ask a question to the user
 rl.question('What is your salary? ', (answer) => {
-  const salary = answer
-  console.log(paye(salary))
-
-  
-  
-  // Close the interface after receiving the answer
-  rl.close();
+    if (isNaN(answer) || answer <= 4000 ){
+        console.log(`Invalid input!! Enter salary again`);
+        
+    } else {
+        paye(answer)
+    }
 });    
-    function paye(income) {
-        if (income <= 24000) {
-            return income*0.1
-        } else if (income <= 32333) {
+    function paye(answer) {
+        if (answer <= 24000) {
+            return answer *0.1
+        }/* else if (income <= 32333) {
             return income* 0.25;
         } else if (income <= 500000) {
             return income*0.3;
         } else if (income <= 800000) {
             return income*0.325;
-        } else {
-            return income*0.35;
+        }*/ else {
+            return answer*0.35;
         }
+        paye(answer);
     }
+    paye();
     function NHIF (grossPay) {
         if (grossPay <= 5999) {
             return 150;
