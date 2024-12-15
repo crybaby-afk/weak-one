@@ -1,0 +1,159 @@
+/* Global styles */
+body {
+    background: #181818; /* Slightly lighter dark background */
+    color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .App {
+    background: #252525; /* Subtle dark card-like container */
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); /* Enhanced shadow for more depth */
+    width: 90%;
+    max-width: 800px;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  /* Title Styling */
+  .title {
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-shadow: 0 6px 16px rgba(255, 255, 255, 0.7), 0 0 25px rgba(255, 85, 85, 0.8); /* Enhanced text-shadow */
+    background: linear-gradient(90deg, #ff8c00, #ff5e62); /* Warm gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s infinite;
+  }
+  
+  /* Shimmer animation for title */
+  @keyframes shimmer {
+    0% {
+      text-shadow: 0 0 6px rgba(255, 85, 85, 0.8), 0 0 12px rgba(255, 192, 80, 0.8);
+    }
+    100% {
+      text-shadow: 0 0 12px rgba(255, 192, 80, 0.9), 0 0 18px rgba(255, 85, 85, 0.9);
+    }
+  }
+  
+  /* Label styling */
+  label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: inline-block;
+    color: #b0b0c0;
+  }
+  
+  /* Input, Textarea, and Select box styling */
+  select, input, textarea {
+    background: #2a2a3d;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    padding: 14px 18px;
+    margin-top: 12px;
+    width: 100%;
+    max-width: 600px;
+    outline: none;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Hover effect for input, select, and textarea */
+  select:hover, input:hover, textarea:hover {
+    box-shadow: 0 8px 22px rgba(37, 117, 252, 0.5);
+    transform: scale(1.02);
+  }
+  
+  /* Button Styling */
+  button {
+    display: inline-block;
+    padding: 16px 32px;
+    margin-top: 25px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for button */
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(106, 17, 203, 0.6);
+  }
+  
+  /* Active state for button */
+  button:active {
+    transform: scale(1);
+  }
+  
+  /* Translate button specific style */
+  button.translate {
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    color: white;
+    box-shadow: 0 6px 20px rgba(255, 106, 0, 0.5);
+  }
+  
+  /* Speak button specific style */
+  button.speak {
+    background: linear-gradient(90deg, #06beb6, #48b1f4);
+    color: white;
+    box-shadow: 0 6px 20px rgba(6, 190, 182, 0.5);
+  }
+  
+  /* Output box (where translated text will appear) */
+  .output {
+    background: #2a2a3d;
+    color: #f1f1f1;
+    padding: 18px;
+    margin-top: 25px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 600px;
+    min-height: 70px;
+    text-align: left;
+    word-wrap: break-word;
+    white-space: pre-wrap; /* Ensures multiple lines in the output box */
+  }
+  
+  /* Styling for the translated text input box */
+  .translated-text-box {
+    background: #1f1f2e;
+    color: #ffffff;
+    border: 2px solid #2575fc;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    padding: 14px 18px;
+    margin-top: 25px;
+    width: 100%;
+    max-width: 600px;
+    height: 160px;
+    resize: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Hover effect for translated text box */
+  .translated-text-box:hover {
+    box-shadow: 0 8px 24px rgba(37, 117, 252, 0.5);
+    transform: scale(1.02);
+  }
+  
